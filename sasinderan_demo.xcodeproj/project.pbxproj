@@ -18,6 +18,11 @@
 		9403ADD52EF9AD2A00413293 /* sasinderan_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADD42EF9AD2A00413293 /* sasinderan_demoUITests.swift */; };
 		9403ADD72EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADD62EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift */; };
 		9403ADEC2EF9B18A00413293 /* PortfolioPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADEB2EF9B18A00413293 /* PortfolioPageViewModel.swift */; };
+		9403ADF02EF9B3CC00413293 /* HoldingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADEF2EF9B3CC00413293 /* HoldingsModel.swift */; };
+		9403ADF22EF9B4FD00413293 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADF12EF9B4FD00413293 /* APIClient.swift */; };
+		9403ADF62EF9B54000413293 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADF52EF9B54000413293 /* EndPoints.swift */; };
+		9403ADF82EF9B5C300413293 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADF72EF9B5C300413293 /* APIError.swift */; };
+		9403ADFA2EF9B78700413293 /* PortFolioRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADF92EF9B78700413293 /* PortFolioRequestService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		9403ADD42EF9AD2A00413293 /* sasinderan_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sasinderan_demoUITests.swift; sourceTree = "<group>"; };
 		9403ADD62EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sasinderan_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9403ADEB2EF9B18A00413293 /* PortfolioPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPageViewModel.swift; sourceTree = "<group>"; };
+		9403ADEF2EF9B3CC00413293 /* HoldingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsModel.swift; sourceTree = "<group>"; };
+		9403ADF12EF9B4FD00413293 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9403ADF52EF9B54000413293 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		9403ADF72EF9B5C300413293 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9403ADF92EF9B78700413293 /* PortFolioRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortFolioRequestService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +157,7 @@
 		9403ADE42EF9AF8000413293 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9403ADEF2EF9B3CC00413293 /* HoldingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +205,7 @@
 		9403ADED2EF9B25500413293 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9403ADF92EF9B78700413293 /* PortFolioRequestService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -201,6 +213,9 @@
 		9403ADEE2EF9B29700413293 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9403ADF12EF9B4FD00413293 /* APIClient.swift */,
+				9403ADF52EF9B54000413293 /* EndPoints.swift */,
+				9403ADF72EF9B5C300413293 /* APIError.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -337,10 +352,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9403ADBB2EF9AD2900413293 /* sasinderan_demo.xcdatamodeld in Sources */,
+				9403ADF22EF9B4FD00413293 /* APIClient.swift in Sources */,
 				9403ADB52EF9AD2900413293 /* ViewController.swift in Sources */,
 				9403ADEC2EF9B18A00413293 /* PortfolioPageViewModel.swift in Sources */,
+				9403ADFA2EF9B78700413293 /* PortFolioRequestService.swift in Sources */,
+				9403ADF02EF9B3CC00413293 /* HoldingsModel.swift in Sources */,
 				9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */,
+				9403ADF62EF9B54000413293 /* EndPoints.swift in Sources */,
 				9403ADB32EF9AD2900413293 /* SceneDelegate.swift in Sources */,
+				9403ADF82EF9B5C300413293 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
