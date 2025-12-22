@@ -17,6 +17,7 @@
 		9403ADCB2EF9AD2A00413293 /* sasinderan_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADCA2EF9AD2A00413293 /* sasinderan_demoTests.swift */; };
 		9403ADD52EF9AD2A00413293 /* sasinderan_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADD42EF9AD2A00413293 /* sasinderan_demoUITests.swift */; };
 		9403ADD72EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADD62EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift */; };
+		9403ADEC2EF9B18A00413293 /* PortfolioPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADEB2EF9B18A00413293 /* PortfolioPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9403ADD02EF9AD2A00413293 /* sasinderan_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sasinderan_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9403ADD42EF9AD2A00413293 /* sasinderan_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sasinderan_demoUITests.swift; sourceTree = "<group>"; };
 		9403ADD62EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sasinderan_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9403ADEB2EF9B18A00413293 /* PortfolioPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +103,15 @@
 		9403ADAF2EF9AD2900413293 /* sasinderan_demo */ = {
 			isa = PBXGroup;
 			children = (
-				9403ADB02EF9AD2900413293 /* AppDelegate.swift */,
-				9403ADB22EF9AD2900413293 /* SceneDelegate.swift */,
-				9403ADB42EF9AD2900413293 /* ViewController.swift */,
-				9403ADB62EF9AD2900413293 /* Main.storyboard */,
-				9403ADBC2EF9AD2A00413293 /* Assets.xcassets */,
-				9403ADBE2EF9AD2A00413293 /* LaunchScreen.storyboard */,
+				9403ADE82EF9AFED00413293 /* StoryBoard */,
+				9403ADE32EF9AF6A00413293 /* SystemDelegates */,
+				9403ADE72EF9AFC900413293 /* Resources */,
+				9403ADE42EF9AF8000413293 /* Model */,
+				9403ADEA2EF9B02000413293 /* View */,
+				9403ADE52EF9AF9100413293 /* ViewModel */,
+				9403ADE62EF9AF9D00413293 /* Controller */,
+				9403ADED2EF9B25500413293 /* ServiceLayer */,
+				9403ADEE2EF9B29700413293 /* NetworkLayer */,
 				9403ADC12EF9AD2A00413293 /* Info.plist */,
 				9403ADB92EF9AD2900413293 /* sasinderan_demo.xcdatamodeld */,
 			);
@@ -128,6 +133,76 @@
 				9403ADD62EF9AD2A00413293 /* sasinderan_demoUITestsLaunchTests.swift */,
 			);
 			path = sasinderan_demoUITests;
+			sourceTree = "<group>";
+		};
+		9403ADE32EF9AF6A00413293 /* SystemDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				9403ADB02EF9AD2900413293 /* AppDelegate.swift */,
+				9403ADB22EF9AD2900413293 /* SceneDelegate.swift */,
+			);
+			path = SystemDelegates;
+			sourceTree = "<group>";
+		};
+		9403ADE42EF9AF8000413293 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9403ADE52EF9AF9100413293 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9403ADEB2EF9B18A00413293 /* PortfolioPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9403ADE62EF9AF9D00413293 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9403ADB42EF9AD2900413293 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9403ADE72EF9AFC900413293 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9403ADBC2EF9AD2A00413293 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9403ADE82EF9AFED00413293 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9403ADB62EF9AD2900413293 /* Main.storyboard */,
+				9403ADBE2EF9AD2A00413293 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		9403ADEA2EF9B02000413293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9403ADED2EF9B25500413293 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		9403ADEE2EF9B29700413293 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +338,7 @@
 			files = (
 				9403ADBB2EF9AD2900413293 /* sasinderan_demo.xcdatamodeld in Sources */,
 				9403ADB52EF9AD2900413293 /* ViewController.swift in Sources */,
+				9403ADEC2EF9B18A00413293 /* PortfolioPageViewModel.swift in Sources */,
 				9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */,
 				9403ADB32EF9AD2900413293 /* SceneDelegate.swift in Sources */,
 			);
