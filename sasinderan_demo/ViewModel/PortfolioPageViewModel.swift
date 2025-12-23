@@ -13,7 +13,7 @@ protocol PortfolioPageDelegate: AnyObject {
 
 final class PortfolioPageViewModel {
     
-    var userHoldings: [IndividualHolding] = []
+    var userHoldings: UserHoldings = .init(userHolding: nil)
     
     var apiService: PortFolioRequestServiceProtocol
     var delegate: PortfolioPageDelegate?
@@ -28,7 +28,7 @@ final class PortfolioPageViewModel {
                 switch holdingResponse {
                 case .success(let holdings):
                     if let userHoldings = holdings.data?.userHolding {
-                        self?.userHoldings = userHoldings
+                        self?.userHoldings.userHolding = userHoldings
                         self?.delegate?.reloadData()
                     }
                 case .failure(let error):

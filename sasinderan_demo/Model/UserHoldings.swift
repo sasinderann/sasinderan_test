@@ -10,7 +10,11 @@ import Foundation
 struct UserHoldings: Codable {
     var userHolding: [IndividualHolding]?
     
-    func getInvestmentConsolidate() -> InvestmentConsolidate {
+    init(userHolding: [IndividualHolding]? = nil) {
+        self.userHolding = userHolding
+    }
+    
+    func getTotalInvestmentConsolidate() -> InvestmentConsolidate {
         let totalLossAndProfit = getCurrentValue() - getInitialInvestment()
         return InvestmentConsolidate(currentValue: getCurrentValue(), totalInvestment: getInitialInvestment(), todayPnL: getTodayProfitAndLoss(), totalPnL: totalLossAndProfit)
     }

@@ -10,10 +10,10 @@
 		9401718D2EFB015C00831152 /* HoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401718C2EFB015C00831152 /* HoldingCell.swift */; };
 		9401718F2EFB053800831152 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401718E2EFB053800831152 /* Extensions.swift */; };
 		940171912EFB0B5D00831152 /* InvestmentConsolidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940171902EFB0B5D00831152 /* InvestmentConsolidateView.swift */; };
-		940171932EFB15AA00831152 /* ProfitLossDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940171922EFB15AA00831152 /* ProfitLossDropDown.swift */; };
 		940171952EFB15EC00831152 /* UserHoldings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940171942EFB15EC00831152 /* UserHoldings.swift */; };
 		940171972EFB160D00831152 /* IndividualHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940171962EFB160D00831152 /* IndividualHolding.swift */; };
 		940171992EFB162900831152 /* InvestmentConsolidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940171982EFB162900831152 /* InvestmentConsolidate.swift */; };
+		9401719B2EFB231D00831152 /* CachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401719A2EFB231D00831152 /* CachingService.swift */; };
 		9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB02EF9AD2900413293 /* AppDelegate.swift */; };
 		9403ADB32EF9AD2900413293 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB22EF9AD2900413293 /* SceneDelegate.swift */; };
 		9403ADB52EF9AD2900413293 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB42EF9AD2900413293 /* ViewController.swift */; };
@@ -53,10 +53,10 @@
 		9401718C2EFB015C00831152 /* HoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingCell.swift; sourceTree = "<group>"; };
 		9401718E2EFB053800831152 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		940171902EFB0B5D00831152 /* InvestmentConsolidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentConsolidateView.swift; sourceTree = "<group>"; };
-		940171922EFB15AA00831152 /* ProfitLossDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLossDropDown.swift; sourceTree = "<group>"; };
 		940171942EFB15EC00831152 /* UserHoldings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHoldings.swift; sourceTree = "<group>"; };
 		940171962EFB160D00831152 /* IndividualHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualHolding.swift; sourceTree = "<group>"; };
 		940171982EFB162900831152 /* InvestmentConsolidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentConsolidate.swift; sourceTree = "<group>"; };
+		9401719A2EFB231D00831152 /* CachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingService.swift; sourceTree = "<group>"; };
 		9403ADAD2EF9AD2900413293 /* sasinderan_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sasinderan_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9403ADB02EF9AD2900413293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9403ADB22EF9AD2900413293 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,7 +218,6 @@
 			children = (
 				9401718C2EFB015C00831152 /* HoldingCell.swift */,
 				940171902EFB0B5D00831152 /* InvestmentConsolidateView.swift */,
-				940171922EFB15AA00831152 /* ProfitLossDropDown.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				9403ADF92EF9B78700413293 /* PortFolioRequestService.swift */,
+				9401719A2EFB231D00831152 /* CachingService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -381,8 +381,8 @@
 				940171992EFB162900831152 /* InvestmentConsolidate.swift in Sources */,
 				9401718D2EFB015C00831152 /* HoldingCell.swift in Sources */,
 				9403ADFA2EF9B78700413293 /* PortFolioRequestService.swift in Sources */,
+				9401719B2EFB231D00831152 /* CachingService.swift in Sources */,
 				9403ADF02EF9B3CC00413293 /* HoldingsModel.swift in Sources */,
-				940171932EFB15AA00831152 /* ProfitLossDropDown.swift in Sources */,
 				9401718F2EFB053800831152 /* Extensions.swift in Sources */,
 				9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */,
 				9403ADF62EF9B54000413293 /* EndPoints.swift in Sources */,

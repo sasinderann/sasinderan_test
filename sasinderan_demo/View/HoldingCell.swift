@@ -34,12 +34,12 @@ class HoldingCell: UITableViewCell {
 
         let leftStack = UIStackView(arrangedSubviews: [entityName, netQuantity])
         leftStack.axis = .vertical
-        leftStack.spacing = 4
+        leftStack.spacing = 8
 
         let rightStack = UIStackView(arrangedSubviews: [ltpLabel, profitAndLoss])
         rightStack.axis = .vertical
         rightStack.alignment = .trailing
-        rightStack.spacing = 4
+        rightStack.spacing = 8
 
         let mainStack = UIStackView(arrangedSubviews: [leftStack, rightStack])
         mainStack.translatesAutoresizingMaskIntoConstraints = false
@@ -49,8 +49,8 @@ class HoldingCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             mainStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            mainStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
-            mainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            mainStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            mainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             mainStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
     }
@@ -60,7 +60,7 @@ class HoldingCell: UITableViewCell {
         netQuantity.text = "NET QTY: \(holding.quantity.zeroUnWrapped)"
         ltpLabel.text = "LTP: ₹\(holding.ltp.zeroUnWrapped)"
         let currentValue = holding.getCurrentValue()
-        profitAndLoss.text = "P&L: ₹\(currentValue)"
+        profitAndLoss.text = "P&L: ₹" + String(format: "%.3f", currentValue)
         profitAndLoss.textColor = currentValue >= 0 ? .systemGreen : .systemRed
     }
 }
