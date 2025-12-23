@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9401718D2EFB015C00831152 /* HoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401718C2EFB015C00831152 /* HoldingCell.swift */; };
+		9401718F2EFB053800831152 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401718E2EFB053800831152 /* Extensions.swift */; };
 		9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB02EF9AD2900413293 /* AppDelegate.swift */; };
 		9403ADB32EF9AD2900413293 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB22EF9AD2900413293 /* SceneDelegate.swift */; };
 		9403ADB52EF9AD2900413293 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403ADB42EF9AD2900413293 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9401718C2EFB015C00831152 /* HoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingCell.swift; sourceTree = "<group>"; };
+		9401718E2EFB053800831152 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9403ADAD2EF9AD2900413293 /* sasinderan_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sasinderan_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9403ADB02EF9AD2900413293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9403ADB22EF9AD2900413293 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				9403ADEE2EF9B29700413293 /* NetworkLayer */,
 				9403ADC12EF9AD2A00413293 /* Info.plist */,
 				9403ADB92EF9AD2900413293 /* sasinderan_demo.xcdatamodeld */,
+				9401718E2EFB053800831152 /* Extensions.swift */,
 			);
 			path = sasinderan_demo;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		9403ADEA2EF9B02000413293 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9401718C2EFB015C00831152 /* HoldingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,8 +361,10 @@
 				9403ADF22EF9B4FD00413293 /* APIClient.swift in Sources */,
 				9403ADB52EF9AD2900413293 /* ViewController.swift in Sources */,
 				9403ADEC2EF9B18A00413293 /* PortfolioPageViewModel.swift in Sources */,
+				9401718D2EFB015C00831152 /* HoldingCell.swift in Sources */,
 				9403ADFA2EF9B78700413293 /* PortFolioRequestService.swift in Sources */,
 				9403ADF02EF9B3CC00413293 /* HoldingsModel.swift in Sources */,
+				9401718F2EFB053800831152 /* Extensions.swift in Sources */,
 				9403ADB12EF9AD2900413293 /* AppDelegate.swift in Sources */,
 				9403ADF62EF9B54000413293 /* EndPoints.swift in Sources */,
 				9403ADB32EF9AD2900413293 /* SceneDelegate.swift in Sources */,

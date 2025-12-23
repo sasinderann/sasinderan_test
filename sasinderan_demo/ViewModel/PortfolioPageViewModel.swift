@@ -7,11 +7,16 @@
 
 import Foundation
 
+protocol PortfolioPageDelegate: AnyObject {
+    func reloadData()
+}
+
 final class PortfolioPageViewModel {
     
-    private var userHoldings: [IndividualHolding] = []
+    var userHoldings: [IndividualHolding] = []
     
-    private var apiService: PortFolioRequestServiceProtocol
+    var apiService: PortFolioRequestServiceProtocol
+    var delegate: PortfolioPageDelegate?
     
     init(APIService: PortFolioRequestServiceProtocol) {
         self.apiService = APIService
@@ -22,9 +27,9 @@ final class PortfolioPageViewModel {
             DispatchQueue.main.async {
                 switch holdingResponse {
                 case .success(let holdings):
-                    print(holdings)
                     if let userHoldings = holdings.data?.userHolding {
                         self?.userHoldings = userHoldings
+                        self?.delegate?.reloadData()
                     }
                 case .failure(let error):
                     print("==== Error in Fetching user Holdings: \(error)")

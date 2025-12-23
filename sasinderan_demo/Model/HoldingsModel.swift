@@ -21,4 +21,13 @@ struct IndividualHolding: Codable {
     var ltp: Double?
     var avgPrice: Double?
     var close: Double?
+    
+    func getCurrentValue() -> Double {
+        if let quantity = self.quantity, let lastTradePrice = self.ltp, let avgPrice = self.avgPrice {
+            let currentValue = lastTradePrice * Double(quantity)
+            let invested = avgPrice * Double(quantity)
+            return currentValue - invested
+        }
+        return -1
+    }
 }
