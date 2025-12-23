@@ -16,7 +16,7 @@ struct UserHoldings: Codable {
     
     func getTotalInvestmentConsolidate() -> InvestmentConsolidate {
         let totalLossAndProfit = getCurrentValue() - getInitialInvestment()
-        return InvestmentConsolidate(currentValue: getCurrentValue(), totalInvestment: getInitialInvestment(), todayPnL: getTodayProfitAndLoss(), totalPnL: totalLossAndProfit)
+        return InvestmentConsolidate(currentValue: getCurrentValue(), totalInvestment: getInitialInvestment(), todayPnL: getTodayProfitAndLoss(), totalPnL: totalLossAndProfit * -1) // negate to profit
     }
     
     func getInitialInvestment() -> Double {

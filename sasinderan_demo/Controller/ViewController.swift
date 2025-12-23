@@ -49,6 +49,7 @@ class ViewController: UIViewController, PortfolioPageDelegate {
             investmentConsolidateView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             investmentConsolidateView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+        investmentConsolidateView.isHidden = true
         
     }
 }
@@ -67,9 +68,11 @@ extension ViewController : UITableViewDataSource {
         return UITableViewCell()
     }
     
+    @MainActor
     func reloadData() {
         self.tableView.reloadData()
-        if let consolidate = self.viewModel?.userHoldings.getInvestmentConsolidate() {
+        if let consolidate = self.viewModel?.userHoldings.getTotalInvestmentConsolidate() {
+            investmentConsolidateView.isHidden = false
             investmentConsolidateView.updateValues(from: consolidate)
         }
     }
