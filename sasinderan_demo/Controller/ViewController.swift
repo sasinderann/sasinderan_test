@@ -21,11 +21,11 @@ class ViewController: UIViewController, PortfolioPageDelegate {
     
     func InitiateViewModel() {
         let apiClient = APIClient()
-        let service = PortFolioRequestService(APIClient: apiClient)
+        let userdefaultCache = UserdefaultCaching(defaults: .standard, cacheKey: "user_holdings")
+        let service = PortFolioRequestService(APIClient: apiClient, cache: userdefaultCache)
         self.viewModel = PortfolioPageViewModel(APIService: service)
         self.viewModel?.delegate = self
         self.viewModel?.fetchUserHoldings()
-        tableView.allowsSelection = false
     }
     
     func setUpTableView() {
@@ -35,6 +35,7 @@ class ViewController: UIViewController, PortfolioPageDelegate {
         investmentConsolidateView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(HoldingCell.self, forCellReuseIdentifier: "HoldingCell")
         tableView.dataSource = self
+        tableView.allowsSelection = false
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
