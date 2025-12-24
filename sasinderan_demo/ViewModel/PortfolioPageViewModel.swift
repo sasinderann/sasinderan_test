@@ -22,7 +22,7 @@ final class PortfolioPageViewModel {
         self.apiService = APIService
     }
     
-    func fetchUserHoldings() {
+    func fetchUserHoldings(completion: @escaping () -> Void) {
         apiService.getUserPortFolioData() { [weak self] holdingResponse in
             DispatchQueue.main.async {
                 switch holdingResponse {
@@ -34,8 +34,8 @@ final class PortfolioPageViewModel {
                 case .failure(let error):
                     print("==== Error in Fetching user Holdings: \(error)")
                 }
+                completion()
             }
-            
         }
     }
 }

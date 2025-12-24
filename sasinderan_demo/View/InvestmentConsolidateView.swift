@@ -97,10 +97,10 @@ class InvestmentConsolidateView: UIView {
     }
     
     func updateValues(from consolidate: InvestmentConsolidate) {
-        self.currentValueLabel.text = "\(consolidate.currentValue)"
-        self.totalInvestmentLabel.text = "\(consolidate.totalInvestment)"
-        self.totalPNLLabel.text = String(format: "%.3f", consolidate.totalPnL)
-        self.todayPNLLabel.text = String(format: "%.3f", consolidate.todayPnL)
+        self.currentValueLabel.text = String(format: "%.2f", consolidate.currentValue)
+        self.totalInvestmentLabel.text = String(format: "%.2f", consolidate.totalInvestment)
+        self.totalPNLLabel.text = String(format: "%.2f", consolidate.totalPnL)
+        self.todayPNLLabel.text = String(format: "%.2f", consolidate.todayPnL)
         
         totalPNLLabel.textColor = consolidate.totalPnL >= 0 ? .systemGreen : .systemRed
         todayPNLLabel.textColor = consolidate.todayPnL >= 0 ? .systemGreen : .systemRed
