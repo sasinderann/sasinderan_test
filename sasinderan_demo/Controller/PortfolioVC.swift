@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, PortfolioPageDelegate {
+class PortfolioVC: UIViewController, PortfolioPageDelegate {
     
     let tableView = UITableView(frame: .zero, style: .plain)
     var viewModel : PortfolioPageViewModel?
@@ -20,6 +20,7 @@ class ViewController: UIViewController, PortfolioPageDelegate {
         initiateViewModel()
         setUpView()
         setUpRefreshControl()
+        setupNavigationBar()
     }
     
     func initiateViewModel() {
@@ -29,6 +30,22 @@ class ViewController: UIViewController, PortfolioPageDelegate {
         self.viewModel = PortfolioPageViewModel(APIService: service)
         self.viewModel?.delegate = self
         refreshData()
+    }
+    
+    func setupNavigationBar() {
+        title = "Portfolio"
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        
+        appearance.backgroundColor = UIColor.systemBlue
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.tintColor = .white
     }
     
     func setUpView() {
@@ -73,7 +90,7 @@ class ViewController: UIViewController, PortfolioPageDelegate {
     }
 }
 
-extension ViewController : UITableViewDataSource {
+extension PortfolioVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.userHoldings.userHolding?.count ?? 0
     }
