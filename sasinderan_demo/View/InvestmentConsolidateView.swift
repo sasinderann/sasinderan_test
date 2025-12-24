@@ -45,6 +45,7 @@ class InvestmentConsolidateView: UIView {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(expandDropDown))
         dropDownRow.isUserInteractionEnabled = true
         dropDownRow.addGestureRecognizer(tapGesture)
+        self.layer.cornerRadius = 8
         
         let stack = UIStackView(arrangedSubviews: [
             currentValueRow,

@@ -52,6 +52,7 @@ class PortfolioVC: UIViewController, PortfolioPageDelegate {
         self.view.addSubview(tableView)
         self.view.addSubview(investmentConsolidateView)
         self.view.addSubview(activityIndicator)
+        view.backgroundColor = .systemBackground
         tableView.translatesAutoresizingMaskIntoConstraints = false
         investmentConsolidateView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(HoldingCell.self, forCellReuseIdentifier: "HoldingCell")
